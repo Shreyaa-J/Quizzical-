@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="loader" class="loader"></div>
+
+  <div id="start-screen" class="quiz-container hidden">
+    <h2>Welcome to the Quiz!</h2>
+    <button id="start-btn" class="btn btn-primary mt-3">Start Quiz</button>
+  </div>
+
+  <div id="game" class="quiz-container hidden">
+    <div class="hud">
+      <div>
+        <p class="fw-bold">Question</p>
+        <h4 id="progressText">1/3</h4>
+        <div class="progress">
+          <div id="progressBarFull" class="progress-bar bg-success" style="width: 0%"></div>
+        </div>
+      </div>
+      <div>
+        <p class="fw-bold">Score</p>
+        <h4 id="score">0</h4>
+      </div>
+    </div>
+
+    <h3 id="question">Loading question...</h3>
+    <div class="choices"></div>
+
+    <button id="next-btn" class="btn btn-success mt-3 hidden">Next Question</button>
+  </div>
+
+  <div id="end-screen" class="quiz-container hidden">
+    <h2>Quiz Finished!</h2>
+    <p id="final-score"></p>
+    <button id="restart-btn" class="btn btn-primary mt-3">Restart Quiz</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
